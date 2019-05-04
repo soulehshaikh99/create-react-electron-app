@@ -4,15 +4,15 @@
 **1) First Create React App**
 
 ```cmd
-npx create-react-app my-react-electron-app
+npx create-react-app create-react-electron-app
                     or
-yarn create react-app my-react-electron-app
+yarn create react-app create-react-electron-app
 ```
 
 **2) Now change directory to that project folder**
 
 ```cmd 
-cd my-react-electron-app
+cd create-react-electron-app
 ```
 
 **3) Now install typescript as development dependency**
