@@ -1,0 +1,49 @@
+{
+  "name": "my-react-electron-app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "public/electron.js",
+  "author": "Souleh Shaikh",
+  "homepage": "./",
+  "license": "MIT",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "electron-dev": "yarn run build && electron .",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "build": {
+    "productName": "React and Electron App",
+    "files": [
+      "build/**/*"
+    ],
+    "extraMetadata": {
+      "main": "build/electron.js"
+    }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^5.0.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.0",
+    "typescript": "^3.4.5"
+  }
+}
