@@ -5,9 +5,7 @@
 
 ```cmd
 npx create-react-app my-react-electron-app
-```
-or
-```cmd
+                    or
 yarn create react-app my-react-electron-app
 ```
 
@@ -21,9 +19,7 @@ cd my-react-electron-app
 
 ```cmd 
 npm install --save-dev typescript
-```
-or
-```cmd
+            or
 yarn add --dev typescript
 ```
 
@@ -31,9 +27,7 @@ yarn add --dev typescript
 
 ```cmd
 npm install --save-dev electron
-```
-or
-```cmd
+            or
 yarn add --dev electron
 ```
 
@@ -41,11 +35,9 @@ yarn add --dev electron
 
 a) Windows Users:
 ```cmd
-notepad.exe public\electron.js
-```
-b) Linux and macOS Users:
-```cmd
-touch public/electron.js
+notepad.exe public\electron.js //Windows Users
+                or
+touch public/electron.js //Linux and macOS Users 
 ```
 
 6) Now paste this code in electron.js file:
