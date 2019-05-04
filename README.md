@@ -1,7 +1,7 @@
 # React and Electron JS App
 > :rocket: :telescope: An easiest way to get started with the most powerful blend of React and Electron JS for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
-1) First Create React App:
+**1) First Create React App**
 
 ```cmd
 npx create-react-app my-react-electron-app
@@ -9,13 +9,13 @@ npx create-react-app my-react-electron-app
 yarn create react-app my-react-electron-app
 ```
 
-2) Now change directory to that project folder:
+**2) Now change directory to that project folder**
 
 ```cmd 
 cd my-react-electron-app
 ```
 
-3) Now install typescript as development dependency:
+**3) Now install typescript as development dependency**
 
 ```cmd 
 npm install --save-dev typescript
@@ -23,7 +23,7 @@ npm install --save-dev typescript
 yarn add --dev typescript
 ```
 
-4) Now install electron as as development dependency:
+**4) Now install electron as as development dependency**
 
 ```cmd
 npm install --save-dev electron
@@ -31,16 +31,16 @@ npm install --save-dev electron
 yarn add --dev electron
 ```
 
-5) Now create electron.js file in public directory<br/>
+**5) Now create electron.js file in public directory**
 
-a) Windows Users:
 ```cmd
 notepad.exe public\electron.js //Windows Users
                 or
 touch public/electron.js //Linux and macOS Users 
 ```
 
-6) Now paste this code in electron.js file:
+**6) Now paste this code in electron.js file**
+
 ```javascript
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron');
@@ -98,8 +98,8 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-7) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
-Your devDependencies section should look like this:
+**7) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
+Your devDependencies section should look like this**
 
 ```json
 "devDependencies": {
@@ -111,7 +111,7 @@ Your devDependencies section should look like this:
 }
 ```
 
-8) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this:
+**8) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
 
 ```json
 "scripts": {
@@ -125,14 +125,14 @@ Your devDependencies section should look like this:
 }
 ```
 
-9) Add the following configuration in package.json:
+**9) Add the following configuration in package.json**
 
 ```json
 "main": "public/electron.js",
 "homepage": "./"
 ```
 
-10) Add build configuration for electron-builder to work properly:
+**10) Add build configuration for electron-builder to work properly**
 
 ```json
 "build": {
