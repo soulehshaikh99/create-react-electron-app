@@ -146,6 +146,10 @@ Your devDependencies section should look like this**
 }
 ```
 
+**Result**
+
+![Result](https://user-images.githubusercontent.com/39525716/57184177-102d3b80-6ed5-11e9-9af6-828e853632a5.PNG)
+
 <h3>Made with :heart: from Souleh</h3>
 
 <h3>:clipboard: License: </h3>
