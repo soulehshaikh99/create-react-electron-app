@@ -5,7 +5,9 @@
 
 ```cmd
 npx create-react-app my-react-electron-app
+```
 or
+```cmd
 yarn create react-app my-react-electron-app
 ```
 
@@ -19,7 +21,9 @@ cd my-react-electron-app
 
 ```cmd 
 npm install --save-dev typescript
+```
 or
+```cmd
 yarn add --dev typescript
 ```
 
@@ -27,7 +31,9 @@ yarn add --dev typescript
 
 ```cmd
 npm install --save-dev electron
+```
 or
+```cmd
 yarn add --dev electron
 ```
 
