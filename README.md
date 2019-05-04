@@ -1,15 +1,17 @@
 # React and Electron JS App
 > :rocket: :telescope: An easiest way to get started with the most powerful blend of React and Electron JS for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
-<h3>Install</h3>
+<h3>Use this boilerplate:</h3>
 
 ```cmd
-$ yarn add create-react-electron-app
-                or
-$ npm install create-react-electron-app
+git clone https://github.com/soulehshaikh99/create-react-electron-app.git
+cd create-react-electron-app
+npm install
+    or
+yarn install
 ```
 
-<h3>Manual Setup</h3>
+<h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
 
 **1) First Create React App**
 
@@ -156,7 +158,12 @@ Your devDependencies section should look like this**
 }
 ```
 
-Note: To use electron-builder you need to install
+**Note:** To use electron-builder you need to install it globally :
+```cmd
+npm install -g electron-builder
+            or
+yarn global add electron-builder
+```
 
 **Scripts Instructions:**
 
