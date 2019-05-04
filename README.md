@@ -148,7 +148,7 @@ Your devDependencies section should look like this**
 
 **Scripts Instructions:**
 
-1) For running app in development mode:
+**1) For running app in development mode**
 
 ```cmd
 yarn run electron-dev
@@ -156,7 +156,7 @@ yarn run electron-dev
 npm run electron-dev
 ```
 
-2) For packaging app using electron-builder:
+**2) For packaging app using electron-builder**
 
 ```cmd
 yarn run electron-pack
@@ -164,7 +164,7 @@ yarn run electron-pack
 npm run electron-pack
 ```
 
-3) For running only react code in browser (development mode) on http://localhost:3000
+**3) For running only react code in browser (development mode) on http://localhost:3000**
 
 ```cmd
 yarn start
@@ -172,7 +172,7 @@ yarn start
 npm start
 ```
 
-4) For building react development code into static production site on http://localhost:5000
+**4) For building react development code into static production site on http://localhost:5000**
 
 ```cmd
 yarn run build
