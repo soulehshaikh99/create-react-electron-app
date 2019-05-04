@@ -1,7 +1,9 @@
 {
   "name": "create-react-electron-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "public/electron.js",
+  "description": "An easiest way to get started with the most powerful blend of React and Electron JS for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using Electron Builder.",
+  "tags": ["electron","electron-builder","desktop-app","installed-app","stateful-app","responsive-app","native-app","reactjs","react-dom","react-scripts","create-react-app","windows","linux","macos","yarn","npx","npm"],
   "homepage": "./",
   "license": "MIT",
   "scripts": {
