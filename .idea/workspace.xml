@@ -33,6 +33,25 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="IdeDocumentHistory">
@@ -43,7 +62,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="86" />
     <option name="y" value="-16" />
     <option name="width" value="800" />
@@ -112,18 +131,18 @@
       <option name="presentableId" value="Default" />
       <updated>1557002424980</updated>
       <workItem from="1557002426724" duration="180000" />
-      <workItem from="1557003587032" duration="85000" />
+      <workItem from="1557003587032" duration="441000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265000" />
+    <option name="totallyTimeSpent" value="621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24968314" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1634981" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -146,6 +165,21 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -159,13 +193,6 @@
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
