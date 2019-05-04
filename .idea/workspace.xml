@@ -13,11 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/electron.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+              <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -42,11 +42,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor />
+              <first_editor relative-caret-position="216">
+                <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+              </first_editor>
               <second_editor />
             </state>
           </provider>
@@ -59,6 +61,7 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -73,7 +76,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -95,6 +97,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,12 +134,13 @@
       <option name="presentableId" value="Default" />
       <updated>1557002424980</updated>
       <workItem from="1557002426724" duration="180000" />
-      <workItem from="1557003587032" duration="554000" />
+      <workItem from="1557003587032" duration="684000" />
+      <workItem from="1557004512647" duration="72000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="734000" />
+    <option name="totallyTimeSpent" value="936000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -172,11 +176,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/public/electron.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="5" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -196,10 +199,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/electron.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="216">
+            <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
