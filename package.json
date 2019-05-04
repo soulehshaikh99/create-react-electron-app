@@ -1,9 +1,7 @@
 {
   "name": "create-react-electron-app",
   "version": "0.1.0",
-  "private": true,
   "main": "public/electron.js",
-  "author": "Souleh Shaikh",
   "homepage": "./",
   "license": "MIT",
   "scripts": {
