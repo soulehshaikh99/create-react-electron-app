@@ -11,6 +11,44 @@ npm install
 yarn install
 ```
 
+<h3>Scripts Instructions:</h3>
+
+**1) For running app in development mode**
+
+```cmd
+yarn run electron-dev
+        or
+npm run electron-dev
+```
+
+**2) For packaging app using electron-builder**
+
+```cmd
+yarn run electron-pack
+        or
+npm run electron-pack
+```
+
+**3) For running only react code in browser (development mode) on http://localhost:3000**
+
+```cmd
+yarn start
+    or
+npm start
+```
+
+**4) For building react development code into static production site on http://localhost:5000**
+
+```cmd
+yarn run build
+yarn global add serve
+        or
+npm run build
+npm install -g serve
+        and
+serve -s build
+```
+
 <h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
 
 **1) First Create React App**
@@ -163,44 +201,6 @@ Your devDependencies section should look like this**
 npm install -g electron-builder
             or
 yarn global add electron-builder
-```
-
-**Scripts Instructions:**
-
-**1) For running app in development mode**
-
-```cmd
-yarn run electron-dev
-        or
-npm run electron-dev
-```
-
-**2) For packaging app using electron-builder**
-
-```cmd
-yarn run electron-pack
-        or
-npm run electron-pack
-```
-
-**3) For running only react code in browser (development mode) on http://localhost:3000**
-
-```cmd
-yarn start
-    or
-npm start
-```
-
-**4) For building react development code into static production site on http://localhost:5000**
-
-```cmd
-yarn run build
-yarn global add serve
-        or
-npm run build
-npm install -g serve
-        and
-serve -s build
 ```
 
 **Result**
