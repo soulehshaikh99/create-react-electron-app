@@ -11,6 +11,9 @@ npm install
 yarn install
 ```
 
+**Note:** If you wish to use npm over yarn then modify package.json by replacing npm with yarn in electron-dev and preelectron-pack scripts.
+But I strongly recommend using yarn as it is a better choice when compared to npm.
+
 <h3>Scripts Instructions:</h3>
 
 **1) For running app in development mode**
@@ -163,6 +166,7 @@ Your devDependencies section should look like this**
 
 **8) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
 
+**Note:** If you want to use npm then replace 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
 ```json
 "scripts": {
     "start": "react-scripts start",
