@@ -59,15 +59,32 @@ npm install --save-dev electron typescript
 yarn add --dev electron typescript
 ```
 
-**4) Create electron.js file in public directory**
+**4) Create .env file to write React Advance Configuration**
 
 ```cmd
-notepad.exe public\electron.js //Windows Users
-                or
-touch public/electron.js //Linux and macOS Users 
+// Windows Users
+notepad.exe .env
+
+// Linux and macOS Users 
+touch .env
 ```
 
-**5) Paste this code in electron.js file**
+**5) Paste this line of code in .env file to disable opening react development output in browser**
+```text
+BROWSER=none
+```
+
+**6) Create electron.js file in public directory**
+
+```cmd
+// Windows Users
+notepad.exe public\electron.js
+
+// Linux and macOS Users
+touch public/electron.js
+```
+
+**7) Paste this code in electron.js file**
 
 ```javascript
 // Modules to control application life and create native browser window
@@ -132,7 +149,7 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-**6) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
+**8) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
 Your devDependencies section should look like this**
 
 ```json
@@ -145,7 +162,7 @@ Your devDependencies section should look like this**
 }
 ```
 
-**7) Install necessary global packages**
+**9) Install necessary global packages**
 
 ```cmd
 npm i -g concurrently wait-on electron-builder
@@ -153,7 +170,7 @@ npm i -g concurrently wait-on electron-builder
 yarn global add concurrently wait-on electron-builder
 ```
 
-**7) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
+**10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
 
 ```json
 "scripts": {
@@ -167,7 +184,7 @@ yarn global add concurrently wait-on electron-builder
   }
 ```
 
-**8) Add the following configuration in package.json**
+**11) Add the following configuration in package.json**
 
 **Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
 ```json
