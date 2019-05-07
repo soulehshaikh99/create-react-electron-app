@@ -7,14 +7,14 @@
 git clone https://github.com/soulehshaikh99/create-react-electron-app.git
 cd create-react-electron-app
 
-npm install
-npm i -g concurrently wait-on electron-builder
-    or
 yarn install
 yarn global add concurrently wait-on electron-builder
+    or
+npm install
+npm i -g concurrently wait-on electron-builder
 ```
 
-**Note:** If you wish to use npm over yarn then modify package.json by replacing 'npm' with 'yarn' in electron-dev and preelectron-pack scripts.
+**Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
 But I strongly recommend using <em>yarn</em> as it is a better choice when compared to <em>npm</em>.
 
 <h3>Scripts Instructions:</h3>
@@ -22,17 +22,17 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 **1) For running app in development mode**
 
 ```cmd
-npm run electron-dev
-        or
 yarn run electron-dev
+        or
+npm run electron-dev
 ```
 
 **2) For packaging app using electron-builder**
 
 ```cmd
-npm run electron-pack
-        or
 yarn run electron-pack
+        or
+npm run electron-pack
 ```
 
 <h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
@@ -40,9 +40,9 @@ yarn run electron-pack
 **1) First Create React App**
 
 ```cmd
-npx create-react-app create-react-electron-app
-                    or
 yarn create react-app create-react-electron-app
+                    or
+npx create-react-app create-react-electron-app
 ```
 
 **2) Change directory to that project folder**
@@ -54,9 +54,9 @@ cd create-react-electron-app
 **3) Install electron and typescript as development dependency**
 
 ```cmd 
-npm install --save-dev electron typescript
-            or
 yarn add --dev electron typescript
+            or
+npm install --save-dev electron typescript
 ```
 
 **4) Create .env file to write React Advance Configuration**
@@ -165,9 +165,9 @@ Your devDependencies section should look like this**
 **9) Install necessary global packages**
 
 ```cmd
-npm i -g concurrently wait-on electron-builder
-            or
 yarn global add concurrently wait-on electron-builder
+            or
+npm i -g concurrently wait-on electron-builder
 ```
 
 **10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
