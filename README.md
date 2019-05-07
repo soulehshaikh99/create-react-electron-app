@@ -1,55 +1,38 @@
 # React and Electron JS App
-> :rocket: :telescope: An easiest way to get started with the most powerful blend of React and Electron JS for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
+> :rocket: :telescope: An easiest way to get started with the most powerful blend of <a target="_blank" href="https://reactjs.org/">React<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
 
 <h3>Use this boilerplate:</h3>
 
 ```cmd
 git clone https://github.com/soulehshaikh99/create-react-electron-app.git
 cd create-react-electron-app
+
 npm install
+npm i -g concurrently wait-on electron-builder
     or
 yarn install
+yarn global add concurrently wait-on electron-builder
 ```
 
-**Note:** If you wish to use npm over yarn then modify package.json by replacing npm with yarn in electron-dev and preelectron-pack scripts.
-But I strongly recommend using yarn as it is a better choice when compared to npm.
+**Note:** If you wish to use npm over yarn then modify package.json by replacing 'npm' with 'yarn' in electron-dev and preelectron-pack scripts.
+But I strongly recommend using <em>yarn</em> as it is a better choice when compared to <em>npm</em>.
 
 <h3>Scripts Instructions:</h3>
 
 **1) For running app in development mode**
 
 ```cmd
-yarn run electron-dev
-        or
 npm run electron-dev
+        or
+yarn run electron-dev
 ```
 
 **2) For packaging app using electron-builder**
 
 ```cmd
-yarn run electron-pack
-        or
 npm run electron-pack
-```
-
-**3) For running only react code in browser (development mode) on http://localhost:3000**
-
-```cmd
-yarn start
-    or
-npm start
-```
-
-**4) For building react development code into static production site on http://localhost:5000**
-
-```cmd
-yarn run build
-yarn global add serve
         or
-npm run build
-npm install -g serve
-        and
-serve -s build
+yarn run electron-pack
 ```
 
 <h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
@@ -62,29 +45,21 @@ npx create-react-app create-react-electron-app
 yarn create react-app create-react-electron-app
 ```
 
-**2) Now change directory to that project folder**
+**2) Change directory to that project folder**
 
 ```cmd 
 cd create-react-electron-app
 ```
 
-**3) Now install typescript as development dependency**
+**3) Install electron and typescript as development dependency**
 
 ```cmd 
-npm install --save-dev typescript
+npm install --save-dev electron typescript
             or
-yarn add --dev typescript
+yarn add --dev electron typescript
 ```
 
-**4) Now install electron as as development dependency**
-
-```cmd
-npm install --save-dev electron
-            or
-yarn add --dev electron
-```
-
-**5) Now create electron.js file in public directory**
+**4) Create electron.js file in public directory**
 
 ```cmd
 notepad.exe public\electron.js //Windows Users
@@ -92,7 +67,7 @@ notepad.exe public\electron.js //Windows Users
 touch public/electron.js //Linux and macOS Users 
 ```
 
-**6) Now paste this code in electron.js file**
+**5) Paste this code in electron.js file**
 
 ```javascript
 // Modules to control application life and create native browser window
@@ -113,12 +88,18 @@ function createWindow () {
         }
     });
 
-    // and load the index.html of the app.
-    mainWindow.loadFile(`${path.join(__dirname, '../build/index.html')}`);
+    // This block of code is intended for development purpose only.
+    // Delete this entire block of code when you are ready to package the application.
+    if(app.isPackaged) {
+        mainWindow.loadURL('http://localhost:3000/');
+    } else {
+        //Do not delete this statement, Use this piece of code when packaging app for production environment
+        mainWindow.loadFile(`${path.join(__dirname, '../build/index.html')}`);
+    }
 
     // Open the DevTools and also disable Electron Security Warning.
     // process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
-    // mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
@@ -151,7 +132,7 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 ```
 
-**7) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
+**6) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
 Your devDependencies section should look like this**
 
 ```json
@@ -164,31 +145,34 @@ Your devDependencies section should look like this**
 }
 ```
 
-**8) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
+**7) Install necessary global packages**
 
-**Note:** If you want to use npm then replace 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
+```cmd
+npm i -g concurrently wait-on electron-builder
+            or
+yarn global add concurrently wait-on electron-builder
+```
+
+**7) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
+
 ```json
 "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "electron-dev": "yarn run build && electron .",
+    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "yarn build",
     "electron-pack": "build"
-}
+  }
 ```
 
-**9) Add the following configuration in package.json**
+**8) Add the following configuration in package.json**
 
+**Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
 ```json
 "main": "public/electron.js",
 "homepage": "./"
-```
-
-**10) Add build configuration for electron-builder to work properly**
-
-```json
 "build": {
     "productName": "React and Electron App",
     "files": [
@@ -198,13 +182,6 @@ Your devDependencies section should look like this**
       "main": "build/electron.js"
     }
 }
-```
-
-**Note:** To use electron-builder you need to install it globally :
-```cmd
-npm install -g electron-builder
-            or
-yarn global add electron-builder
 ```
 
 **Result**
