@@ -18,7 +18,7 @@ function createWindow () {
 
     // This block of code is intended for development purpose only.
     // Delete this entire block of code when you are ready to package the application.
-    if(app.isPackaged) {
+    if(!app.isPackaged) {
         mainWindow.loadURL('http://localhost:3000/');
     } else {
         //Do not delete this statement, Use this piece of code when packaging app for production environment
