@@ -16,12 +16,18 @@ function createWindow () {
         }
     });
 
-    // and load the index.html of the app.
-    mainWindow.loadFile(`${path.join(__dirname, '../build/index.html')}`);
+    // This block of code is intended for development purpose only.
+    // Delete this entire block of code when you are ready to package the application.
+    if(app.isPackaged) {
+        mainWindow.loadURL('http://localhost:3000/');
+    } else {
+        //Do not delete this statement, Use this piece of code when packaging app for production environment
+        mainWindow.loadFile(`${path.join(__dirname, '../build/index.html')}`);
+    }
 
     // Open the DevTools and also disable Electron Security Warning.
     // process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
-    // mainWindow.webContents.openDevTools()
+    // mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
     mainWindow.on('closed', function () {
