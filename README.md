@@ -8,10 +8,10 @@ git clone https://github.com/soulehshaikh99/create-react-electron-app.git
 cd create-react-electron-app
 
 yarn install
-yarn global add concurrently wait-on electron-builder
+yarn global add concurrently wait-on electron electron-builder
     or
 npm install
-npm i -g concurrently wait-on electron-builder
+npm i -g concurrently wait-on electron electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
@@ -173,9 +173,9 @@ Your devDependencies section should look like this**
 **9) Install necessary global packages**
 
 ```cmd
-yarn global add concurrently wait-on electron-builder
+yarn global add concurrently wait-on electron electron-builder
             or
-npm i -g concurrently wait-on electron-builder
+npm i -g concurrently wait-on electron electron-builder
 ```
 
 **10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
