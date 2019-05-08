@@ -13,7 +13,9 @@ function createWindow () {
         height: 600,
         webPreferences: {
             nodeIntegration: true
-        }
+        },
+        icon: `${path.join(__dirname, 'favicon.ico')}`,
+        show: false
     });
 
     // This block of code is intended for development purpose only.
@@ -35,7 +37,13 @@ function createWindow () {
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
         mainWindow = null
-    })
+    });
+
+    // Emitted when the window is ready to be shown
+    // This helps in showing the window gracefully.
+    mainWindow.once('ready-to-show', () => {
+        mainWindow.show()
+    });
 }
 
 // This method will be called when Electron has finished
