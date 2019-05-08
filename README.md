@@ -181,7 +181,7 @@ npm i -g concurrently wait-on electron-builder
     "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "yarn build",
     "electron-pack": "build"
-  }
+}
 ```
 
 **11) Add the following configuration in package.json**
