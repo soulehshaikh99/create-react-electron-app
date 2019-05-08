@@ -56,7 +56,7 @@ cd create-react-electron-app
 ```cmd 
 yarn add --dev electron typescript
             or
-npm install --save-dev electron typescript
+npm i -D electron typescript
 ```
 
 **4) Create .env file to write React Advance Configuration**
