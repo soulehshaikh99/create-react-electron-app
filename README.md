@@ -189,7 +189,7 @@ npm i -g concurrently wait-on electron-builder
 **Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
 ```json
 "main": "public/electron.js",
-"homepage": "./"
+"homepage": "./",
 "build": {
     "productName": "React and Electron App",
     "files": [
