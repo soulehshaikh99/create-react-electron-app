@@ -4,14 +4,14 @@
 <h3>Use this boilerplate:</h3>
 
 ```cmd
-git clone https://github.com/soulehshaikh99/create-react-electron-app.git
-cd create-react-electron-app
+$ git clone https://github.com/soulehshaikh99/create-react-electron-app.git
+$ cd create-react-electron-app
 
-yarn install
-yarn global add concurrently wait-on electron electron-builder
+$ yarn install
+$ yarn global add concurrently wait-on electron electron-builder
     or
-npm install
-npm i -g concurrently wait-on electron electron-builder
+$ npm install
+$ npm i -g concurrently wait-on electron electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
@@ -22,17 +22,17 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 **1) For running app in development mode**
 
 ```cmd
-yarn run electron-dev
+$ yarn run electron-dev
         or
-npm run electron-dev
+$ npm run electron-dev
 ```
 
 **2) For packaging app using electron-builder**
 
 ```cmd
-yarn run electron-pack
+$ yarn run electron-pack
         or
-npm run electron-pack
+$ npm run electron-pack
 ```
 
 <h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
@@ -40,33 +40,33 @@ npm run electron-pack
 **1) First Create React App**
 
 ```cmd
-yarn create react-app create-react-electron-app
+$ yarn create react-app create-react-electron-app
                     or
-npx create-react-app create-react-electron-app
+$ npx create-react-app create-react-electron-app
 ```
 
 **2) Change directory to that project folder**
 
 ```cmd 
-cd create-react-electron-app
+$ cd create-react-electron-app
 ```
 
 **3) Install electron and typescript as development dependency**
 
 ```cmd 
-yarn add --dev electron typescript
+$ yarn add --dev electron typescript
             or
-npm i -D electron typescript
+$ npm i -D electron typescript
 ```
 
 **4) Create .env file to write React Advance Configuration**
 
 ```cmd
 // Windows Users
-notepad.exe .env
+$ notepad.exe .env
 
 // Linux and macOS Users 
-touch .env
+$ touch .env
 ```
 
 **5) Paste this line of code in .env file to disable opening react development output in browser**
@@ -78,10 +78,10 @@ BROWSER=none
 
 ```cmd
 // Windows Users
-notepad.exe public\electron.js
+$ notepad.exe public\electron.js
 
 // Linux and macOS Users
-touch public/electron.js
+$ touch public/electron.js
 ```
 
 **7) Paste this code in electron.js file**
@@ -173,9 +173,9 @@ Your devDependencies section should look like this**
 **9) Install necessary global packages**
 
 ```cmd
-yarn global add concurrently wait-on electron electron-builder
+$ yarn global add concurrently wait-on electron electron-builder
             or
-npm i -g concurrently wait-on electron electron-builder
+$ npm i -g concurrently wait-on electron electron-builder
 ```
 
 **10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
