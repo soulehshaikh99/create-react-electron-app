@@ -162,11 +162,11 @@ Your devDependencies section should look like this**
 
 ```json
 "devDependencies": {
-    "electron": "^5.0.1",
+    "electron": "^5.0.6",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0",
-    "typescript": "^3.4.5"
+    "react-scripts": "^3.0.1",
+    "typescript": "^3.5.2"
 }
 ```
 
