@@ -209,6 +209,26 @@ $ npm i -g concurrently wait-on electron electron-builder
 }
 ```
 
+**12) Project Dependencies Version Info**
+
+**Local Dependencies**
+```json
+"electron": "5.0.6"
+"react": "16.8.6"
+"react-dom": "16.8.6"
+"react-scripts": "3.0.1"
+"typescript": "3.5.2"
+```
+
+**Global Dependencies**
+```json
+"concurrently":"4.1.1"
+"create-react-app":"3.0.1"
+"electron":"5.0.6"
+"electron-builder":"20.44.4"
+"wait-on":"3.2.0"
+```
+
 **Result**
 
 ![Result](https://user-images.githubusercontent.com/39525716/57184177-102d3b80-6ed5-11e9-9af6-828e853632a5.PNG)
