@@ -8,10 +8,10 @@ $ git clone https://github.com/soulehshaikh99/create-react-electron-app.git
 $ cd create-react-electron-app
 
 $ yarn install
-$ yarn global add concurrently wait-on electron electron-builder
+$ yarn global add concurrently wait-on electron-builder
     or
 $ npm install
-$ npm i -g concurrently wait-on electron electron-builder
+$ npm i -g concurrently wait-on electron-builder
 ```
 
 **Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
@@ -22,7 +22,7 @@ But I strongly recommend using <em>yarn</em> as it is a better choice when compa
 **1) For running app in development mode**
 
 ```cmd
-$ yarn run electron-dev
+$ yarn electron-dev
         or
 $ npm run electron-dev
 ```
@@ -30,7 +30,7 @@ $ npm run electron-dev
 **2) For packaging app using electron-builder**
 
 ```cmd
-$ yarn run electron-pack
+$ yarn electron-pack
         or
 $ npm run electron-pack
 ```
@@ -51,12 +51,12 @@ $ npx create-react-app create-react-electron-app
 $ cd create-react-electron-app
 ```
 
-**3) Install electron and typescript as development dependency**
+**3) Install electron as development dependency**
 
 ```cmd 
-$ yarn add --dev electron typescript
+$ yarn add --dev electron
             or
-$ npm i -D electron typescript
+$ npm i -D electron
 ```
 
 **4) Create .env file to write React Advance Configuration**
@@ -162,20 +162,19 @@ Your devDependencies section should look like this**
 
 ```json
 "devDependencies": {
-    "electron": "^5.0.6",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1",
-    "typescript": "^3.5.2"
+    "electron": "^6.0.9",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1"
 }
 ```
 
 **9) Install necessary global packages**
 
 ```cmd
-$ yarn global add concurrently wait-on electron electron-builder
+$ yarn global add concurrently wait-on electron-builder
             or
-$ npm i -g concurrently wait-on electron electron-builder
+$ npm i -g concurrently wait-on electron-builder
 ```
 
 **10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
@@ -188,7 +187,7 @@ $ npm i -g concurrently wait-on electron electron-builder
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "yarn build",
-    "electron-pack": "build"
+    "electron-pack": "electron-builder"
 }
 ```
 
@@ -213,20 +212,18 @@ $ npm i -g concurrently wait-on electron electron-builder
 
 **Local Dependencies**
 ```json
-"electron": "5.0.6"
-"react": "16.8.6"
-"react-dom": "16.8.6"
-"react-scripts": "3.0.1"
-"typescript": "3.5.2"
+"electron": "^6.0.9",
+"react": "^16.9.0",
+"react-dom": "^16.9.0",
+"react-scripts": "3.1.1"
 ```
 
 **Global Dependencies**
 ```json
-"concurrently":"4.1.1"
-"create-react-app":"3.0.1"
-"electron":"5.0.6"
-"electron-builder":"20.44.4"
-"wait-on":"3.2.0"
+"concurrently": "^4.1.2",
+"create-react-app": "^3.1.1",
+"electron-builder": "^21.2.0",
+"wait-on": "^3.3.0"
 ```
 
 **Result**
