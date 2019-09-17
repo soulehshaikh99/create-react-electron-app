@@ -1,10 +1,16 @@
 {
   "name": "create-react-electron-app",
-  "version": "0.3.0",
-  "main": "public/electron.js",
-  "description": "An easiest way to get started with the most powerful blend of React and Electron JS for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using Electron Builder.",
-  "homepage": "./",
+  "version": "0.5.0",
+  "author": "Souleh Shaikh",
   "license": "MIT",
+  "main": "public/electron.js",
+  "homepage": "./",
+  "devDependencies": {
+    "electron": "^6.0.9",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.1.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -12,10 +18,7 @@
     "eject": "react-scripts eject",
     "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
     "preelectron-pack": "yarn build",
-    "electron-pack": "build"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "electron-pack": "electron-builder"
   },
   "build": {
     "productName": "React and Electron App",
@@ -25,6 +28,9 @@
     "extraMetadata": {
       "main": "build/electron.js"
     }
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [
@@ -38,11 +44,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "electron": "^5.0.6",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "^3.0.1",
-    "typescript": "^3.5.2"
-  }
+  
 }
