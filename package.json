@@ -6,7 +6,7 @@
   "main": "public/electron.js",
   "homepage": "./",
   "devDependencies": {
-    "electron": "^6.0.9",
+    "electron": "^9.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1"
