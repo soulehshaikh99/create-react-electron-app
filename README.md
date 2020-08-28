@@ -1,236 +1,68 @@
-# React and Electron JS App
-> :rocket: :telescope: An easiest way to get started with the most powerful blend of <a target="_blank" href="https://reactjs.org/">React<a/> and <a target="_blank" href="https://electronjs.org/">Electron JS</a> for building Stateful and Native Desktop(Installed) Application for Windows, Linux and macOS using <a target="_blank" href="https://github.com/electron-userland/electron-builder">Electron Builder</a>.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<h3>Use this boilerplate:</h3>
+## Available Scripts
 
-```cmd
-$ git clone https://github.com/soulehshaikh99/create-react-electron-app.git
-$ cd create-react-electron-app
+In the project directory, you can run:
 
-$ yarn install
-$ yarn global add concurrently wait-on electron-builder
-    or
-$ npm install
-$ npm i -g concurrently wait-on electron-builder
-```
+### `yarn start`
 
-**Note:** If you wish to use npm over yarn then modify package.json by replacing 'yarn' with 'npm' in electron-dev and preelectron-pack scripts.
-But I strongly recommend using <em>yarn</em> as it is a better choice when compared to <em>npm</em>.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-<h3>Scripts Instructions:</h3>
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-**1) For running app in development mode**
+### `yarn test`
 
-```cmd
-$ yarn electron-dev
-        or
-$ npm run electron-dev
-```
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-**2) For packaging app using electron-builder**
+### `yarn build`
 
-```cmd
-$ yarn electron-pack
-        or
-$ npm run electron-pack
-```
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-<h3>Manual Setup using <a href="https://github.com/facebook/create-react-app">CRA</a>(create-react-app)</h3>
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-**1) First Create React App**
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-```cmd
-$ yarn create react-app create-react-electron-app
-                    or
-$ npx create-react-app create-react-electron-app
-```
+### `yarn eject`
 
-**2) Change directory to that project folder**
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```cmd 
-$ cd create-react-electron-app
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-**3) Install electron as development dependency**
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-```cmd 
-$ yarn add --dev electron
-            or
-$ npm i -D electron
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-**4) Create .env file to write React Advance Configuration**
+## Learn More
 
-```cmd
-// Windows Users
-$ notepad.exe .env
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-// Linux and macOS Users 
-$ touch .env
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-**5) Paste this line of code in .env file to disable opening react development output in browser**
-```text
-BROWSER=none
-```
+### Code Splitting
 
-**6) Create electron.js file in public directory**
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-```cmd
-// Windows Users
-$ notepad.exe public\electron.js
+### Analyzing the Bundle Size
 
-// Linux and macOS Users
-$ touch public/electron.js
-```
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-**7) Paste this code in electron.js file**
+### Making a Progressive Web App
 
-```javascript
-// Modules to control application life and create native browser window
-const {app, BrowserWindow} = require('electron');
-const path = require('path');
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-// Keep a global reference of the window object, if you don't, the window will
-// be closed automatically when the JavaScript object is garbage collected.
-let mainWindow;
+### Advanced Configuration
 
-function createWindow () {
-    // Create the browser window.
-    mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            nodeIntegration: true
-        },
-        icon: `${path.join(__dirname, 'favicon.ico')}`,
-        show: false
-    });
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-    // This block of code is intended for development purpose only.
-    // Delete this entire block of code when you are ready to package the application.
-    if(!app.isPackaged) {
-        mainWindow.loadURL('http://localhost:3000/');
-    } else {
-        //Do not delete this statement, Use this piece of code when packaging app for production environment
-        mainWindow.loadFile(`${path.join(__dirname, '../build/index.html')}`);
-    }
+### Deployment
 
-    // Open the DevTools and also disable Electron Security Warning.
-    // process.env['ELECTRON_DISABLE_SECURITY_WARNINGS'] = true;
-    // mainWindow.webContents.openDevTools();
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-    // Emitted when the window is closed.
-    mainWindow.on('closed', function () {
-        // Dereference the window object, usually you would store windows
-        // in an array if your app supports multi windows, this is the time
-        // when you should delete the corresponding element.
-        mainWindow = null
-    });
+### `yarn build` fails to minify
 
-    // Emitted when the window is ready to be shown
-    // This helps in showing the window gracefully.
-    mainWindow.once('ready-to-show', () => {
-        mainWindow.show()
-    });
-}
-
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
-
-// Quit when all windows are closed.
-app.on('window-all-closed', function () {
-    // On macOS it is common for applications and their menu bar
-    // to stay active until the user quits explicitly with Cmd + Q
-    if (process.platform !== 'darwin') app.quit()
-});
-
-app.on('activate', function () {
-    // On macOS it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
-    if (mainWindow === null) createWindow()
-});
-
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
-```
-
-**8) Move dependencies react, react-dom and react-scripts to devDependencies as they are not needed in production build.
-Your devDependencies section should look like this**
-
-```json
-"devDependencies": {
-    "electron": "^6.0.9",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1"
-}
-```
-
-**9) Install necessary global packages**
-
-```cmd
-$ yarn global add concurrently wait-on electron-builder
-            or
-$ npm i -g concurrently wait-on electron-builder
-```
-
-**10) Add electron-dev, preelectron-pack and electron-pack scripts. Make sure your scripts section in package.json looks like this**
-
-```json
-"scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-dev": "concurrently \"yarn start\" \"wait-on http://localhost:3000 && electron .\"",
-    "preelectron-pack": "yarn build",
-    "electron-pack": "electron-builder"
-}
-```
-
-**11) Add the following configuration in package.json**
-
-**Note:** build configuration is used by electron-builder, modify it if you wish to add more packaging and native distribution options for different OS Platforms.
-```json
-"main": "public/electron.js",
-"homepage": "./",
-"build": {
-    "productName": "React and Electron App",
-    "files": [
-      "build/**/*"
-    ],
-    "extraMetadata": {
-      "main": "build/electron.js"
-    }
-}
-```
-
-**12) Project Dependencies Version Info**
-
-**Local Dependencies**
-```json
-"electron": "^6.0.9",
-"react": "^16.9.0",
-"react-dom": "^16.9.0",
-"react-scripts": "3.1.1"
-```
-
-**Global Dependencies**
-```json
-"concurrently": "^4.1.2",
-"create-react-app": "^3.1.1",
-"electron-builder": "^21.2.0",
-"wait-on": "^3.3.0"
-```
-
-**Result**
-
-![Result](https://user-images.githubusercontent.com/39525716/57184177-102d3b80-6ed5-11e9-9af6-828e853632a5.PNG)
-
-<h3>Made with :heart: from Souleh</h3>
-
-<h3>:clipboard: License: </h3>
-Licensed under the <a href="https://github.com/soulehshaikh99/create-react-electron-app/blob/master/LICENSE">MIT License</a>.
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
