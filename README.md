@@ -66,7 +66,7 @@ $ yarn electron-pack # or npm run electron-pack
 
 ### 💫 Create this boilerplate from scratch (Manual Setup)
 
-#### 1) Use create-react-app scaffolding tool to get started with cra template.
+#### 1) Use create-react-app scaffolding tool to get started with react-cra template.
 
 ```bash
 $ yarn create react-app create-react-electron-app
@@ -91,7 +91,7 @@ $ cd create-react-electron-app
   "react": "^16.13.1",
   "react-dom": "^16.13.1",
   "react-scripts": "3.4.3",
-},
+}
 ```
 
 #### 4) Install Development Dependencies
@@ -124,7 +124,7 @@ $ yarn add electron-serve # or npm i electron-serve
   "react-dom": "^16.13.1",
   "react-scripts": "3.4.3",
   "wait-on": "^5.2.0"
-},
+}
 ```
 
 #### 7) Create .env file
